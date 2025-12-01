@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pigiarniq';
+    src: url('../FuntesTexto/PIGIARNIQ REGULAR.TTF');
+}
+
+@font-face {
+    font-family: 'Natural';
+    src: url('../FuntesTexto/NATURAL.TTF');
+}
+
+body, p, input, textarea, button, label, span, div {
+    font-family: 'Pigiarniq', sans-serif;
+}
+
+body {
+    background-image: url('imagenesInicio/fondo.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    flex-grow: 1; 
+    position: relative; 
+}
+
+.main-footer {
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 150px; 
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 5px; 
+}
+
+.social-icon {
+    width: 150px; 
+    height: 100px;
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6)); 
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 92px;
+    text-shadow: 10px 6px 1px #000000;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: 'Natural', sans-serif; 
+}
+
+
+.marco {
+    background-image: url('imagenesInicio/marco-flores.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recuadro {
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    margin: 200px auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #C2C5AA;
+    position: relative;
+}
+
+.color-fondo {
+    background-image: url('imagenesInicio/madera.jpg');
+    width: 470px;
+    height: 570px;
+    margin: 0 auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.botones-izquierda {
+    position: absolute;
+    left: 17%;
+    top: 62.5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+}
+
+.icono-contacto,
+.icono-productos {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+
+.icono-contacto {
+    background-image: url("imagenesInicio/Contacto.png");
+}
+
+.icono-productos {
+    background-image: url("imagenesInicio/Productos.png");
+}
+
+.icono-contacto:hover,
+.icono-productos:hover {
+    transform: scale(1.05);
+}
+
+.mapa {
+    position: absolute;
+    top: 60%;
+    right: 6%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 350px;
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    z-index: 5;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

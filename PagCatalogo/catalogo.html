@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="icon" href="imagenesInicio/logo.png">
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="contenedor-busqueda">
+            <input type="checkbox" id="alternar-busqueda" hidden>
+            <label for="alternar-busqueda" class="boton-busqueda" aria-label="Buscar productos">
+                <img src="imagenesCatalogo/lupa.png" alt="Icono de Lupa" class="icono-busqueda">
+            </label>
+
+            <input type="text" placeholder="Busca tu producto aquí..." class="entrada-busqueda">
+
+            <input type="checkbox" id="alternar-filtro" hidden>
+            <label for="alternar-filtro" class="boton-filtro" aria-label="Abrir filtros">
+                <img src="imagenesCatalogo/filtro.png" alt="Icono de Filtro" class="icono-filtro">
+            </label>
+
+            <div class="menu-filtros">
+                <ul>
+                    <li>Tipo de producto</li>
+                    <li>Ingrediente</li>
+                    <li>Precio</li>
+                    <li>Más comprados</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cartel-seccion">
+            <img src="imagenesCatalogo/cartelSeccion.png" alt="Cartel">
+            <h1>Productos</h1>
+        </div>
+
+        <div class="productos">
+            <div class="producto">
+                <img src="imagenesCatalogo/Producto1.png" alt="Producto 1">
+            </div>
+            <div class="producto">
+                <img src="imagenesCatalogo/Producto2.png" alt="Producto 2">
+            </div>
+            <div class="producto">
+                <img src="imagenesCatalogo/Producto3.png" alt="Producto 3">
+            </div>
+            <div class="producto">
+                <img src="imagenesCatalogo/Producto4.png" alt="Producto 4">
+            </div>
+            <div class="producto">
+                <img src="imagenesCatalogo/Producto5.png" alt="Producto 5">
+            </div>
+            <div class="producto">
+                <img src="imagenesCatalogo/Producto6.png" alt="Producto 6">
+            </div>
+        </div>
+
+        <div class="botones-izquierda">
+            <a href="../PagInicio/inicio.html" class="enlace-inicio">
+                <div class="icono-inicio"></div>
+            </a>
+            <a href="../PagContacto/contacto.html" class="enlace-contacto">
+                <div class="icono-contacto"></div>
+            </a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="social-links">
+            <a href="https://www.twitter.com/" target="_blank" aria-label="Twitter">
+                <img src="imagenesCatalogo/x.png" alt="Logo de Twitter/X" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="imagenesCatalogo/ig.png" alt="Logo de Instagram" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="imagenesCatalogo/facebook.png" alt="Logo de Facebook" class="social-icon">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

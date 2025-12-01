@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Pigiarniq';
+    src: url('../FuntesTexto/PIGIARNIQ REGULAR.TTF');
+}
+
+@font-face {
+    font-family: 'Natural';
+    src: url('../FuntesTexto/NATURAL.TTF');
+}
+
+body {
+    background-image: url(imagenesCatalogo/Fondo.jpg);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+}
+
+body, p, input, textarea, button, h1, h2, h3, h4, h5, h6, span, label, div {
+    font-family: 'Pigiarniq', sans-serif;
+}
+
+.contenido {
+    flex-grow: 1;
+    position: relative;
+}
+
+.contenedor-busqueda {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 20;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+.entrada-busqueda {
+    opacity: 0;
+    width: 0;
+    padding: 10px 20px;
+    border: 3px solid #343c17;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1.1em;
+    outline: none;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+#alternar-busqueda:checked ~ .entrada-busqueda {
+    opacity: 1;
+    width: 300px;
+    pointer-events: auto;
+}
+
+.boton-busqueda,
+.boton-filtro {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.boton-busqueda:hover,
+.boton-filtro:hover {
+    transform: scale(1.1);
+}
+
+.icono-busqueda,
+.icono-filtro {
+    width: 130px;
+    height: 90px;
+    object-fit: contain;
+    filter: none;
+}
+
+.menu-filtros {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #6B8E23;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 30;
+}
+
+.menu-filtros ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-filtros li {
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-filtros li:hover {
+    background: #343c17;
+}
+
+#alternar-filtro:checked ~ .menu-filtros {
+    display: block;
+}
+
+.main-footer {
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 150px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 5px;
+}
+
+.social-icon {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.1);
+}
+
+.cartel-seccion {
+    position: relative;
+    text-align: center;
+    margin-top: -80px;
+    margin-bottom: -60px;
+}
+
+.cartel-seccion img {
+    max-width: 400px;
+}
+
+.cartel-seccion h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Natural', sans-serif;
+    font-size: 92px;
+    text-shadow: 10px 6px 1px #000000;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.botones-izquierda {
+    position: absolute;
+    left: 17.2%;
+    top: 65.5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+}
+
+.icono-inicio,
+.icono-contacto {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+
+.icono-inicio {
+    background-image: url("imagenesCatalogo/Inicio.png");
+}
+
+.icono-contacto {
+    background-image: url("imagenesCatalogo/Contacto.png");
+}
+
+.icono-inicio:hover,
+.icono-contacto:hover {
+    transform: scale(1.05);
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 80px;
+    padding: 0 10px;
+}
+
+.producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 270px;
+    margin: 0 auto;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
